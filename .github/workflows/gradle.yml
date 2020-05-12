@@ -28,5 +28,5 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: spotify-layer
-        tags: latest
+        tags: latest,github
         dockerfile: {path}/docker/Dockerfile
