@@ -25,8 +25,8 @@ jobs:
     - name: Docker Build and Push Action
       uses: docker/build-push-action@v1
       with:
+        tags: latest,github
+        repository: spotify-layer
+        dockerfile: {path}/docker/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: spotify-layer
-        tags: latest,github
-        dockerfile: {path}/docker/Dockerfile
