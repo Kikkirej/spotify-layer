@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: Spotify-Layer
+  security:
+    user:
+      name: "kikkirej"
+      password: "pizza"
