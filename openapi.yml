@@ -13,6 +13,7 @@ servers:
   - url: "https://spotify.kikkirej.net"
 tags:
   - name: "player"
+  - name: "meta"
 paths:
   /player/pause:
     description: "pause the playpack, or when paused starts playing again"
@@ -24,7 +25,7 @@ paths:
           description: "successful"
         "401":
           description: "Auth failed"
-  /player/forwards:
+  /player/next:
     description: "skip to next title"
     post:
       tags:
@@ -34,5 +35,21 @@ paths:
           description: "successful"
         "401":
           description: "Auth failed"
-security:
-  - BasicAuth: []
+  /player/previous:
+    description: "back to previous title"
+    post:
+      tags:
+        - "player"
+      responses:
+        "200":
+          description: "successful"
+        "401":
+          description: "Auth failed"
+  /meta/song/current:
+    description: "meta information to current song"
+    post:
+      tags:
+        - "meta"
+      responses:
+        "200":
+          description: "successful"
