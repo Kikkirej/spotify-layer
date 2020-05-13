@@ -1,0 +1,38 @@
+openapi: "3.0.3"
+info:
+    title: "Spotify Layer"
+    version: "1.0.0"
+    contact:
+      name: Fabian Lemke
+      email: info@kikkirej.net
+      url: https://github.com/Kikkirej/spotify-layer
+    license:
+      name: "Apache 2"
+      url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+servers:
+  - url: "https://spotify.kikkirej.net"
+tags:
+  - name: "player"
+paths:
+  /player/pause:
+    description: "pause the playpack, or when paused starts playing again"
+    post:
+      tags:
+        - "player"
+      responses:
+        "200":
+          description: "successful"
+        "401":
+          description: "Auth failed"
+  /player/forwards:
+    description: "skip to next title"
+    post:
+      tags:
+        - "player"
+      responses:
+        "200":
+          description: "successful"
+        "401":
+          description: "Auth failed"
+security:
+  - BasicAuth: []
