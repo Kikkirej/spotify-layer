@@ -25,10 +25,9 @@ import kotlin.collections.Map
 @RequestMapping("\${api.base-path:}")
 class MetaApiController() {
 
-
-    @PostMapping(
-        value = ["/meta/song/current"])
+    @PostMapping(value = ["/meta/song/current"])
     fun metaSongCurrentPost(): ResponseEntity<Unit> {
+
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 }

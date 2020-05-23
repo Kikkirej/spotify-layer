@@ -14,5 +14,3 @@ The variables in this command need to be replaced logically
 
 ### ID and Secret of Spotify-API
 These are avaible at the [Developer Dashbpard from Spotify](https://developer.spotify.com/dashboard). They need to be generated for a specific Account.
-
-

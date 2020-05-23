@@ -2,6 +2,18 @@ spring:
   application:
     name: Spotify-Layer
   security:
-    user:
-      name: "kikkirej"
-      password: "pizza"
+    basic:
+      enabled: false
+    oauth2:
+      client:
+        provider:
+          registration:
+            clientId: ${SPOTIFY_CLIENT_ID}
+            clientSecret: ${SPOTIFY_CLIENT_SECRET}
+            accessTokenUri: https://accounts.spotify.com/api/token
+            userAuthorizationUri: https://accounts.spotify.com/authorize
+            authenticationScheme: query
+            clientAuthenticationScheme: form
+            scope: user-read-private, user-read-email
+        resource:
+          userInfoUri: https://api.spotify.com/v1/me
